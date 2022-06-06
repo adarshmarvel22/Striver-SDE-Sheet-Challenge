@@ -1,5 +1,6 @@
 class Solution {
 public:
+//     asad
     int maxProfit(vector<int>& prices) {
         int profit=0;
         int p=prices[0];
