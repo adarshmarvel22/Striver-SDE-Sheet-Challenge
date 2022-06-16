@@ -35,18 +35,3 @@ else
 return l;
 
 }
-Time taken: 6 hours +
-Score:
-105
-/
-350
-C++17 (Gcc-9.2)
-Old view
-12345678910111213141516171819202122
-else 
-   l=m+1;   
-        
-    }
-return l;
-
-}
