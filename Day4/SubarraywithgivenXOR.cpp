@@ -1,16 +1,16 @@
-
 int Solution::solve(vector<int> &a, int b) {
-    long long int maxl=0;
-    long long int xorsum;
+    map<int,int>vis;
+    int x = 0;
+    long long cnt=0;
     int n=a.size();
     for(int i=0;i<n;i++){
-        xorsum=0;
-        //  if(xorsum==b)  maxl=max(maxl,1);
-        for(int j=i;j<n;j++){
-            xorsum^=a[j];
-            if(xorsum==b)  maxl++;
-            
+        x=x^a[i];
+        if(x==b) cnt++;
+        int y = x^b;
+        if(vis.find(y)!=vis.end()){
+            cnt=cnt+vis[y];
         }
+        vis[x]++;
     }
-    return maxl;
+    return cnt;
 }
